@@ -1,0 +1,43 @@
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <p-button icon="pi pi-list" styleClass="p-button-rounded p-button-help p-button-text p-button-raised"
+      (click)="sidebarVisible = true"></p-button>
+  </div>
+  <div class="p-toolbar-group-end">
+    <p-button icon="pi pi-search" (click)="showDialogModal()"
+      styleClass="p-button-rounded p-button-success p-button-text p-button-raised"></p-button>
+    <p-button icon="pi pi-sign-out"
+      styleClass="p-button-rounded p-button-danger p-button-text p-button-raised"></p-button>
+  </div>
+</p-toolbar>
+
+<p-sidebar [(visible)]="sidebarVisible">
+  <ng-template pTemplate="header">
+    <h1>Menu</h1>
+  </ng-template>
+  <ng-template pTemplate="content" class="col-12">
+    <p-button label="Home" icon="pi pi-ticket" (click)="goHome()"
+      styleClass="p-button-help p-button-text w-full p-button-lg"></p-button>
+    <p-button label="Search Movie" icon="pi pi-search" (click)="showDialogModal()"
+      styleClass="p-button-help p-button-text w-full p-button-lg"></p-button>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p>&copy; 2023 Sebastian Mancilla</p>
+  </ng-template>
+</p-sidebar>
+
+
+<!-- Modal Dialog for Search -->
+<p-dialog header="Search a Movie" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false">
+  <form [formGroup]="searchForm" (ngSubmit)="searchMovie()" class="flex">
+    <div class="p-inputgroup mt-2">
+      <p-button icon="pi pi-search" type="submit"
+        styleClass="p-button-success p-button-text p-button-raised p-button-lg"></p-button>
+      <span class="p-float-label">
+        <input id="float-input" type="text" size="30" pInputText formControlName="searchTerm">
+        <label for="float-input">Key word</label>
+      </span>
+    </div>
+  </form>
+</p-dialog>

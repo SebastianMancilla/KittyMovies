@@ -1,0 +1,30 @@
+<div class="grid grid-nogutter surface-section text-800">
+  <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
+
+    <section>
+      <span class="block text-6xl font-bold mb-1">{{movie.title}}</span>
+      <div class="text-6xl text-primary font-bold mb-3">{{movie.tagline}}</div>
+      <p class="text-2xl mt-0 mb-4 text-700 line-height-4">{{movie.overview}}</p>
+
+      <button (click)="show()" pButton pRipple label="Play Tryller" type="button" class="p-button-outlined"></button>
+      <div>
+        <h1>Genres: </h1>
+        <div *ngFor="let genre of movie.genres" style="display: inline !important;">
+          <p-chip [label]="genre.name" class="m-2"></p-chip>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <div class="col-12 md:col-6 overflow-hidden image-container">
+    <img [src]="movie.backdrop_path | fillImage:'600_and_h900_bestv2'" [alt]="movie.title"
+      class="md:ml-auto block md:h-full img-blur" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+
+    <p-card [header]="movie.title" class="card-puesto" [style]="{ width: '400px', height: '50px' }">
+      <ng-template pTemplate="header">
+        <img [alt]="movie.title" [src]="movie.backdrop_path | fillImage:'500'" />
+      </ng-template>
+    </p-card>
+
+  </div>
+</div>

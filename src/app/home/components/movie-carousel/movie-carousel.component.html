@@ -1,0 +1,6 @@
+<p-carousel [value]="movies" [numVisible]="4" [numScroll]="4" [circular]="true"
+[responsiveOptions]="responsiveOptions" [autoplayInterval]="4000">
+<ng-template let-movie pTemplate="item" class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+  <card-movie [movie]="movie" class="flex justify-content-center"></card-movie>
+</ng-template>
+</p-carousel>

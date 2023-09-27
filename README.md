@@ -1,27 +1,59 @@
 # KittyMovie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+<p align="center">
+  <a href="https://angular.io/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png" width="200" alt="Nest Logo" /></a>
+</p>
 
-## Development server
+# Dev
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repository
+2. Exec `node init` for download node_modules
+3. Change the variables in ```environments.development.ts```
+4. Run the project (if you don't have AngularCLI install)
 
-## Code scaffolding
+```
+   ng serve -o
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Preview
 
-## Build
+## Home Page
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This is the Home Page and you can see latest releases movies
 
-## Running unit tests
+![Home Page](images/HomePageScreen.png)
+![Latests](images/LatestReleasesMovies.png)
+and comin' soon movies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![CominSoon](images/CominSoonMovies.png)
 
-## Running end-to-end tests
+in the toolbar you can use the side button and search button.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![SideButton](images/SideButton.png)
 
-## Further help
+press the side button to show the side menu
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![SideNav](images/SideNav.png)
+
+## Information of Movie
+If is of interest to you a movie, you can press the button ```info```, and see the movie information in another page and watch Triller, cast, videos, photos, posters and logos of these movie.
+![MovieInformation](images/MovieInfoPage.png)
+![MovieInformation](images/MovieInfoPage2.png)
+
+
+
+## Search
+For search, you can press the search button in the side menu or in the 
+toolbar too, and using the keyboard enter a word related to a movie you want to search for.
+![SearchModal](images/SearchModal.png)
+![ResultsSearch](images/ResultsMovies.png)
+
+
+## Used tools
+
+* __Angular__ (Framework v_16.1.0)
+* __PrimeNG__
+* __PrimeFlex__
+* __TMDB__ (API used for movie information)
+
+

@@ -1,0 +1,14 @@
+.card-puesto{
+  position: absolute;
+  top: 60%; /* Ajusta la posición vertical del card */
+  right: 1%; /* Ajusta la posición horizontal del card */
+  transform: translate(-50%, -50%); /* Centra el card en el contenedor */
+  width: 80%; /* Ajusta el ancho del card según tus necesidades */
+  max-width: 400px; /* Ajusta el ancho máximo del card según tus necesidades */
+  padding: 20px; /* Espaciado interior del card */
+}
+
+.image-container{
+  position: relative;
+  height:700px;
+}

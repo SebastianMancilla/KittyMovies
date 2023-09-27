@@ -1,0 +1,8 @@
+<p-carousel [value]="cast" [numVisible]="6" [numScroll]="6" [circular]="true"
+[responsiveOptions]="responsiveOptions" [autoplayInterval]="10000000">
+<ng-template let-cast pTemplate="item" class="surface-border border-round m-2 text-center">
+  <card-cast [actor]="cast" class="flex justify-content-center"></card-cast>
+</ng-template>
+</p-carousel>
+
+

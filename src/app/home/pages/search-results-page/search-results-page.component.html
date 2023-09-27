@@ -1,0 +1,11 @@
+<section>
+  <div>
+    <h1>Results: </h1>
+  </div>
+
+  <div class="grid bm-8 p-3">
+    <div *ngFor="let movie of movies" class="col-12 sm:col-4 md:col-3 xl:col:2">
+      <card-movie [movie]="movie"></card-movie>
+    </div>
+  </div>
+</section>

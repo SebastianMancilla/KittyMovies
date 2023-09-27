@@ -1,0 +1,20 @@
+<div class="hero">
+  <div class="background-overlay"></div>
+  <div class="text-overlay">
+      <h1>Welcome to Kitty Movies!</h1>
+      <p>Discover and search for what you like.</p>
+  </div>
+</div>
+
+<div>
+  <div>
+    <h1 class="flex align-items-center justify-content-center">Latest Releases</h1>
+    <p-divider></p-divider>
+    <movie-carousel [movies]="movies"></movie-carousel>
+  </div>
+  <div>
+    <h1 class="flex align-items-center justify-content-center">Coming Soon</h1>
+    <p-divider></p-divider>
+    <movie-carousel [movies]="upcomingMovies"></movie-carousel>
+  </div>
+</div>

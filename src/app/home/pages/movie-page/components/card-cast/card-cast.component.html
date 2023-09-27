@@ -1,0 +1,8 @@
+<p-card [header]="actor.name" [subheader]="actor.character" [style]="{ width: '200px',}">
+  <ng-template pTemplate="header">
+      <img [alt]="actor.name" [src]="actor.profile_path | fillImage:'138_and_h175_face'" />
+  </ng-template>
+  <ng-template pTemplate="footer">
+      <p-button label="info" icon="pi pi-info-circle" styleClass="p-button-rounded p-button-info p-button-text p-button-raised"></p-button>
+  </ng-template>
+</p-card>

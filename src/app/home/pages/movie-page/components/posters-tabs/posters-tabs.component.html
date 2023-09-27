@@ -1,0 +1,31 @@
+<p-tabView styleClass="tabview-custom">
+  <p-tabPanel>
+    <ng-template pTemplate="header">
+      <i class="pi pi-calendar"></i>
+      <span>Backdrops</span>
+    </ng-template>
+
+    <div>
+      <gallery-posters [dataPosters]="posters.backdrops"></gallery-posters>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Posters">
+    <ng-template pTemplate="header">
+      <i class="pi pi-user"></i>
+      <span>Posters</span>
+    </ng-template>
+    <div>
+      <gallery-posters [dataPosters]="posters.posters"></gallery-posters>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Logos">
+    <ng-template pTemplate="header">
+      <i class="pi pi-search"></i>
+      <span>Logos</span>
+      <i class="pi pi-cog"></i>
+    </ng-template>
+    <div>
+      <gallery-posters [dataPosters]="posters.logos"></gallery-posters>
+    </div>
+  </p-tabPanel>
+</p-tabView>
